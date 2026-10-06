@@ -151,6 +151,60 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sección de Eventos -->
+        <section id="events" class="py-16 px-4 bg-white border-t border-gray-100">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-2">Próximos Eventos</h2>
+                    <p class="text-gray-500">Únete a nuestra comunidad y transforma tu mentalidad en vivo.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                    <!-- Evento 1 -->
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-200 shadow-sm flex flex-col md:flex-row items-center gap-6 hover:shadow-md transition-shadow">
+                        <div class="bg-brand-orange text-white rounded-xl p-4 text-center min-w-[100px]">
+                            <span class="block text-sm uppercase font-semibold">NOV</span>
+                            <span class="block text-3xl font-bold">15</span>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h3 class="text-xl font-bold text-brand-dark mb-1">Taller: Desbloquea tu Potencial</h3>
+                            <p class="text-sm text-gray-600 mb-3">Conferencia presencial sobre establecimiento de metas y disciplina.</p>
+                            <span class="inline-block bg-white border border-gray-200 text-xs font-bold px-3 py-1 rounded-full text-gray-600 mb-4 md:mb-0">
+                                📍 Santo Domingo
+                            </span>
+                        </div>
+                        <div>
+                            <button onclick="registerEvent('Taller: Desbloquea tu Potencial', '15 de Noviembre')" class="w-full md:w-auto bg-brand-dark hover:bg-black text-white font-semibold py-2 px-6 rounded-xl transition-colors whitespace-nowrap">
+                                Inscribirse
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Asesoría 1 a 1 -->
+        <section id="consulting" class="py-20 px-4 bg-brand-dark text-white text-center">
+            <div class="max-w-3xl mx-auto">
+                <i class="ph ph-users-three text-5xl text-brand-orange mb-4 block"></i>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Necesitas orientación personalizada?</h2>
+                <p class="text-gray-300 text-lg mb-8">
+                    Agenda una sesión de asesoría 1 a 1. Hablaremos sobre tus objetivos, los bloqueos que te detienen y crearemos un plan de acción directo para tu crecimiento.
+                </p>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="text-left">
+                        <h4 class="text-xl font-bold mb-1">Sesión de Claridad</h4>
+                        <p class="text-sm text-gray-400">Videollamada de 45 minutos.</p>
+                    </div>
+                    <button onclick="scheduleMeeting()" class="w-full sm:w-auto bg-brand-orange hover:bg-brand-orangeHover text-white font-bold py-3 px-8 rounded-xl flex items-center justify-center gap-2 transition-transform transform hover:-translate-y-1">
+                        <i class="ph ph-calendar-plus text-xl"></i>
+                        Agendar Espacio
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-white border-t border-gray-100 py-8 text-center mt-auto">

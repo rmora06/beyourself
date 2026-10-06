@@ -168,3 +168,19 @@ window.checkoutWhatsApp = function() {
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
     window.open(whatsappURL, '_blank');
 }
+
+// --- Lógica para Eventos y Asesorías ---
+
+window.registerEvent = function(eventName, eventDate) {
+    const message = `Hola Be Yourself! 🌟%0A%0AQuiero adquirir una entrada para el evento:%0A*${eventName}*%0A📅 Fecha: ${eventDate}%0A%0APor favor, indícame la disponibilidad, el costo y los métodos de pago.`;
+    
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    window.open(whatsappURL, '_blank');
+}
+
+window.scheduleMeeting = function() {
+    const message = `Hola Be Yourself! 🤝%0A%0AEstoy interesado/a en agendar una *Sesión de Claridad 1 a 1* (45 min).%0A%0AMe gustaría conocer los horarios disponibles para esta semana y las tarifas de la asesoría.`;
+    
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    window.open(whatsappURL, '_blank');
+}
