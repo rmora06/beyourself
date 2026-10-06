@@ -95,7 +95,6 @@ window.updateQuantity = function(id, delta) {
 
 // Render Cart items and calculate total
 function updateCartUI() {
-    // Clear current items (except empty message which we'll manage)
     cartItemsContainer.innerHTML = '';
     
     let total = 0;
@@ -117,18 +116,18 @@ function updateCartUI() {
             totalItems += item.quantity;
 
             const itemEl = document.createElement('div');
-            itemEl.className = 'flex justify-between items-center bg-white p-3 rounded-xl border border-gray-100 shadow-sm';
+            itemEl.className = 'flex justify-between items-center bg-brand-bg p-3 rounded-xl border border-brand-border shadow-sm';
             itemEl.innerHTML = `
                 <div class="flex-1">
-                    <h4 class="font-bold text-sm text-brand-dark">${item.name}</h4>
+                    <h4 class="font-bold text-sm text-brand-text">${item.name}</h4>
                     <p class="text-brand-orange font-semibold text-sm">$${item.price.toFixed(2)}</p>
                 </div>
-                <div class="flex items-center gap-3 bg-gray-50 rounded-lg p-1 border">
-                    <button onclick="updateQuantity('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-brand-dark hover:bg-gray-200 rounded-md transition">
+                <div class="flex items-center gap-3 bg-brand-card rounded-lg p-1 border border-brand-border">
+                    <button onclick="updateQuantity('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-brand-muted hover:text-white hover:bg-brand-border rounded-md transition">
                         <i class="ph ph-minus"></i>
                     </button>
-                    <span class="font-bold text-sm w-4 text-center">${item.quantity}</span>
-                    <button onclick="updateQuantity('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-brand-dark hover:bg-gray-200 rounded-md transition">
+                    <span class="font-bold text-sm w-4 text-center text-brand-text">${item.quantity}</span>
+                    <button onclick="updateQuantity('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-brand-muted hover:text-white hover:bg-brand-border rounded-md transition">
                         <i class="ph ph-plus"></i>
                     </button>
                 </div>
@@ -136,13 +135,11 @@ function updateCartUI() {
             cartItemsContainer.appendChild(itemEl);
         });
 
-        // Update badge
         cartBadge.textContent = totalItems;
         cartBadge.classList.remove('scale-0');
         cartBadge.classList.add('scale-100');
     }
 
-    // Update Total Price display
     cartTotalEl.textContent = `$${total.toFixed(2)}`;
 }
 
